@@ -1,0 +1,38 @@
+<p>
+  <b>Title:</b>
+  <%=h @album.title %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%=h @album.release_date %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%=h @album.genre %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @album.created_at %>
+</p>
+
+<p>
+  <b>Image path:</b>
+  <%=h @album.image_path %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%=h @album.artist_id %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @album.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

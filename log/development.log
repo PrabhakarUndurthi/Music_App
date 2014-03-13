@@ -448,3 +448,144 @@ Processing AlbumsController#new (for 127.0.0.1 at 2014-03-13 17:50:28) [GET]
 Rendering template within layouts/albums
 Rendering albums/new
 Completed in 35ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2014-03-13 17:54:03) [POST]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "album"=>{"created_at(3i)"=>"13", "created_at(4i)"=>"12", "created_at(1i)"=>"2014", "price"=>"$2", "created_at(5i)"=>"20", "genre"=>"Rock", "release_date(4i)"=>"12", "image_path"=>"", "created_at(2i)"=>"3", "release_date(1i)"=>"2014", "release_date(5i)"=>"20", "release_date(2i)"=>"3", "title"=>"Abbey Road", "artist_id"=>"Beatles", "release_date(3i)"=>"13"}, "commit"=>"Create"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (189.4ms)[0m   [0;1mINSERT INTO `albums` (`genre`, `price`, `image_path`, `title`, `release_date`, `artist_id`, `created_at`, `updated_at`) VALUES('Rock', 0.0, '', 'Abbey Road', '2014-03-13 12:20:00', 0, '2014-03-13 12:20:00', '2014-03-13 12:24:03')[0m
+  [4;35;1mSQL (153.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/albums/1
+Completed in 354ms (DB: 344) | 302 Found [http://127.0.0.1/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2014-03-13 17:54:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (14.4ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 27ms (View: 7, DB: 16) | 200 OK [http://127.0.0.1/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2014-03-13 17:54:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.1ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 30ms (View: 25, DB: 1) | 200 OK [http://127.0.0.1/albums/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2014-03-13 17:54:34) [PUT]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "id"=>"1", "album"=>{"created_at(3i)"=>"13", "created_at(4i)"=>"12", "created_at(1i)"=>"2014", "price"=>"$2.2", "created_at(5i)"=>"20", "genre"=>"Rock", "release_date(4i)"=>"12", "image_path"=>"", "created_at(2i)"=>"3", "release_date(1i)"=>"2014", "release_date(5i)"=>"20", "release_date(2i)"=>"3", "title"=>"Abbey Road", "artist_id"=>"0", "release_date(3i)"=>"13"}, "commit"=>"Update"}
+  [4;36;1mAlbum Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/albums/1
+Completed in 11ms (DB: 2) | 302 Found [http://127.0.0.1/albums/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2014-03-13 17:54:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.1ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/albums/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-13 17:54:52) [GET]
+  [4;36;1mAlbum Load (0.4ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2014-03-13 17:54:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.3ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2014-03-13 17:56:15) [GET]
+  [4;36;1mAlbum Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2014-03-13 17:56:34) [POST]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "album"=>{"created_at(3i)"=>"13", "created_at(4i)"=>"12", "created_at(1i)"=>"2014", "price"=>"0.0", "created_at(5i)"=>"26", "genre"=>"Pop", "release_date(4i)"=>"12", "image_path"=>"", "created_at(2i)"=>"3", "release_date(1i)"=>"2014", "release_date(5i)"=>"26", "release_date(2i)"=>"3", "title"=>"Let it be", "artist_id"=>"Beates", "release_date(3i)"=>"13"}, "commit"=>"Create"}
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAlbum Create (0.4ms)[0m   [0mINSERT INTO `albums` (`genre`, `price`, `image_path`, `title`, `release_date`, `artist_id`, `created_at`, `updated_at`) VALUES('Pop', 0.0, '', 'Let it be', '2014-03-13 12:26:00', 0, '2014-03-13 12:26:00', '2014-03-13 12:26:34')[0m
+  [4;36;1mSQL (160.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/albums/2
+Completed in 173ms (DB: 162) | 302 Found [http://127.0.0.1/albums]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2014-03-13 17:56:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAlbum Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 9ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/albums/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-13 17:56:37) [GET]
+  [4;35;1mAlbum Load (0.3ms)[0m   [0mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;36;1mAlbum Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2014-03-13 17:57:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 33ms (View: 25, DB: 2) | 200 OK [http://127.0.0.1/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-13 17:57:22) [GET]
+  [4;35;1mAlbum Load (0.1ms)[0m   [0mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/albums]

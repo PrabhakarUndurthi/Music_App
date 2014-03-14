@@ -1,0 +1,33 @@
+<%= error_messages_for 'album' %>
+
+<!--[form:album]-->
+<p><label for="album_title">Title</label><br/>
+<%= text_field 'album', 'title'  %></p>
+
+<p><label for="album_artist_id">Artist ID</label><br/>
+<%= select_tag('artist_id', options_for_select([['choose one', '']] + @artists.collect {|art| [art.name, art.id]}, @album.artist_id))  %></p>
+
+<p><label for="album_release_date">Release date</label><br/>
+<%= datetime_select('album', 'release_date', :start_year => 1960 )%></p>
+
+<p><label for="album_genre">Genre</label><br/>
+<%= text_field 'album', 'genre'  %></p>
+
+<p><label for="album_created_at">Created at</label><br/>
+<%= datetime_select 'album', 'created_at'  %></p>
+
+<p><label for="album_updated_at">Updated at</label><br/>
+<%= datetime_select 'album', 'updated_at'  %></p>
+
+<p><label for="album_feature">Feature List:</label><br/>
+	<% for feature in @features -%>
+		<%= check_box_tag('feature_list[]', feature.id, @album.features.collect {|obj| obj.id}.include?(feature.id)) %><%= feature.name %><br />
+	<% end -%>
+</p>	
+<p><label for="album_image_path">Image path</label><br/>
+<%= text_field 'album', 'image_path'  %></p>
+
+<p><label for="album_image_path">Price</label><br/>
+<%= text_field 'album', 'price'  %></p>
+<!--[eoform:album]-->
+

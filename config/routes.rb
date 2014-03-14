@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :features
+
+  map.resources :artists
+
   #map.resources :publics
 
   map.resources :albums

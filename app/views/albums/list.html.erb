@@ -1,0 +1,46 @@
+<%= link_to('Return to Menu', :controller => 'admin', :action => 'menu')%><br />
+
+<h1>Listing Albums</h1>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Title</th>
+		<th>Artist</th>
+		<th>Release Date</th>
+		<th>Genre</th>
+		<th>Price</th>
+		<th>Created</th>
+		<th>Updated</th>
+		<th>Image Location</th>
+		<th>Features</th>
+	</tr>
+
+<% for album in @albums -%>
+	<tr>
+		<td><%= album.id %></td>
+		<td><%= album.title %></td>
+		<td><%= album.artist.name if album.artist %></td>
+		<td><%= album.release_date %></td>
+		<td><%= album.genre %></td>
+		<td><%= album.price %></td>
+		<td><%= album.created_at %></td>
+		<td><%= album.updated_at %></td>
+		<td><%= album.image_path %></td>
+		<td>
+			<% for feature in album.features -%>
+				<%= feature.name %><br />
+			<% end -%>
+		</td>
+		<td><%= link_to('Show', :action => 'show', :id => album) %></td>
+		<td><%= link_to('Edit', :action => 'edit', :id => album) %></td>
+		<td><%= link_to('Destroy', { :action => 'destroy', :id => album }, 
+						:confirm => 'Are you sure?', :post => true) %></td>
+	</tr>
+<% end -%>
+</table>
+
+<%= link_to('Previous page', { :page => @album_pages.current.previous }) if @album_pages.current.previous %>
+<%= link_to('Next page', { :page => @album_pages.current.next }) if @album_pages.current.next %> 
+<br />
+<%= link_to('New album', :action => 'new') %>

@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
 
-  scaffold :album
+  #scaffold :album
 
 end

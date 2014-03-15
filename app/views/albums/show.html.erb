@@ -1,38 +1,20 @@
-<p>
-  <b>Title:</b>
-  <%=h @album.title %>
+<h1>Showing <%= @album.title %></h1>
+
+<p><strong>ID:</strong> <%= @album.id %></p>
+<p><strong>Title:</strong> <%= @album.title %></p>
+<p><strong>Artist:</strong> <%= link_to(@album.artist.name, 
+  :controller => 'artists', :action => 'show', :id => @album.artist.id) if @album.artist %></p>
+<p><strong>Released:</strong> <%= @album.release_date %></p>
+<p><strong>Genre:</strong> <%= @album.genre %></p>
+<p><strong>Price:</strong> <%= @album.price %></p>
+<p><strong>Created:</strong> <%= @album.created_at %></p>
+<p><strong>Updated:</strong> <%= @album.updated_at %></p>
+<p><strong>Image Location:</strong> <%= @album.image_path %></p>
+<p><strong>Features:</strong><br />
+  <% for feature in @album.features -%>
+    <%= feature.name %><br />
+  <% end -%>
 </p>
 
-<p>
-  <b>Release date:</b>
-  <%=h @album.release_date %>
-</p>
-
-<p>
-  <b>Genre:</b>
-  <%=h @album.genre %>
-</p>
-
-<p>
-  <b>Created at:</b>
-  <%=h @album.created_at %>
-</p>
-
-<p>
-  <b>Image path:</b>
-  <%=h @album.image_path %>
-</p>
-
-<p>
-  <b>Artist:</b>
-  <%=h @album.artist_id %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%=h @album.price %>
-</p>
-
-
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<%= link_to('Edit', :action => 'edit', :id => @album) %> |
+<%= link_to('Back', :action => 'list') %>

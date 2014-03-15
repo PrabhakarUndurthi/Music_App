@@ -1,3 +1,13 @@
+<h1>Showing Feature: <%= @feature.name %></h1>
 
-<%= link_to 'Edit', edit_feature_path(@feature) %> |
-<%= link_to 'Back', features_path %>
+<p><strong>ID:</strong> <%= @feature.id %></p>
+<p><strong>Name:</strong> <%= @feature.name %></p>
+
+<p>Albums containing this feature are:<br />
+	<% for album in @feature.albums -%>
+		<%= link_to(album.title, :controller => 'albums', :action => 'show', :id => album.id) %>, 
+		<%= link_to(album.artist.name, :controller => 'artists', :action => 'show', :id => album.artist.id) if album.artist %><br />
+	<% end -%>
+</p>
+<%= link_to('Edit', :action => 'edit', :id => @feature) %> |
+<%= link_to('Back', :action => 'list') %>

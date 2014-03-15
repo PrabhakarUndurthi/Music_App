@@ -1,0 +1,26 @@
+<%= link_to('Return to Menu', :controller => 'admin', :action => 'menu')%><br />
+
+<h1>Listing features</h1>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+	</tr>
+
+<% for feature in @features -%>
+	<tr>
+		<td><%= feature.id %></td>
+		<td><%= feature.name %></td>
+		<td><%= link_to('Show', :action => 'show', :id => feature) %></td>
+		<td><%= link_to('Edit', :action => 'edit', :id => feature) %></td>
+		<td><%= link_to('Destroy', { :action => 'destroy', :id => feature }, 
+					:confirm => 'Are you sure?', :post => true) %></td>
+	</tr>
+<% end -%>
+</table>
+
+<%= link_to('Previous page', { :page => @feature_pages.current.previous }) if @feature_pages.current.previous %>
+<%= link_to('Next page', { :page => @feature_pages.current.next }) if @feature_pages.current.next %>
+<br />
+<%= link_to('New feature', :action => 'new') %>

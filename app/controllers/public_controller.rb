@@ -2,8 +2,11 @@ class PublicController < ApplicationController
 
 	before_filter :find_or_create_cart, :only => [:add_to_cart, :show_cart,:empty_cart]
 
+    layout 'standard'
+
 	def list
 		@albums = Album.find(:all, :order => 'title ASC')
+		render(:layout => 'albums')
 	end
 
 	def add_to_cart

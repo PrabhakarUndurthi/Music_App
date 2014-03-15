@@ -1,0 +1,28 @@
+<h1>Editing public</h1>
+
+<% form_for(@public) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :artist_id %><br />
+    <%= f.text_field :artist_id %>
+  </p>
+  <p>
+    <%= f.label :release_date %><br />
+    <%= f.datetime_select :release_date %>
+  </p>
+  <p>
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @public %> |
+<%= link_to 'Back', publics_path %>

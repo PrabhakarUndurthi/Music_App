@@ -2,10 +2,24 @@
 
 <table>
   <tr>
+    <th>Title</th>
+    <th>Release date</th>
+    <th>Genre</th>
+    <th>Created at</th>
+    <th>Image path</th>
+    <th>Artist</th>
+    <th>Price</th>
   </tr>
 
 <% @albums.each do |album| %>
   <tr>
+    <td><%=h album.title %></td>
+    <td><%=h album.release_date %></td>
+    <td><%=h album.genre %></td>
+    <td><%=h album.created_at %></td>
+    <td><%=h album.image_path %></td>
+    <td><%=h album.artist_id %></td>
+    <td><%=h album.price %></td>
     <td><%= link_to 'Show', album %></td>
     <td><%= link_to 'Edit', edit_album_path(album) %></td>
     <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>

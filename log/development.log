@@ -10924,3 +10924,188 @@ Processing AlbumsController#edit (for 127.0.0.1 at 2014-03-14 15:12:41) [GET]
 Rendering template within layouts/albums
 Rendering albums/edit
 Completed in 38ms (View: 26, DB: 1) | 200 OK [http://127.0.0.1/albums/2/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2014-03-14 15:55:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAlbum Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.1ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 82ms (View: 24, DB: 2) | 200 OK [http://127.0.0.1/albums/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2014-03-14 15:55:52) [PUT]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "id"=>"2", "commit"=>"Update"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArtist Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `artists`[0m
+  [4;36;1mArtist Load (0.1ms)[0m   [0;1mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;35;1mSQL (21.4ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+Completed in 44ms (View: 7, DB: 24) | 200 OK [http://127.0.0.1/albums/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-14 15:55:54) [GET]
+  [4;36;1mAlbum Load (2.8ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (6.3ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 48ms (View: 34, DB: 9) | 200 OK [http://127.0.0.1/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2014-03-14 15:55:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/albums/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2014-03-14 15:56:01) [PUT]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "id"=>"1", "commit"=>"Update"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.1ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArtist Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `artists`[0m
+  [4;36;1mArtist Load (0.1ms)[0m   [0;1mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+Completed in 22ms (View: 8, DB: 2) | 200 OK [http://127.0.0.1/albums/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-14 15:56:03) [GET]
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2014-03-14 15:56:06) [GET]
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2014-03-14 15:56:07) [POST]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "commit"=>"Create"}
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2014-03-14 15:58:38) [POST]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "commit"=>"Create"}
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/albums]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-14 15:58:40) [GET]
+  [4;35;1mAlbum Load (0.2ms)[0m   [0mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;36;1mAlbum Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2014-03-14 15:58:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 3) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/albums/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2014-03-14 15:58:51) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 3) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/albums/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2014-03-14 15:58:54) [PUT]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "id"=>"3", "commit"=>"Update"}
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mArtist Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `artists`[0m
+  [4;35;1mArtist Load (0.2ms)[0m   [0mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+Completed in 21ms (View: 7, DB: 2) | 200 OK [http://127.0.0.1/albums/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2014-03-14 16:09:38) [PUT]
+  Parameters: {"authenticity_token"=>"ud8oKKrsAmGg7SIWt/iMqK36UweHBV6Tqc+lGzwj0zM=", "id"=>"3", "commit"=>"Update"}
+  [4;35;1mAlbum Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mArtist Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `artists`[0m
+  [4;35;1mArtist Load (0.1ms)[0m   [0mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `artists` WHERE (`artists`.`id` = 0) [0m
+Completed in 75ms (View: 60, DB: 2) | 200 OK [http://127.0.0.1/albums/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2014-03-14 16:09:42) [GET]
+  [4;35;1mAlbum Load (0.2ms)[0m   [0mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;36;1mAlbum Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Completed in 94ms (View: 88, DB: 1) | 200 OK [http://127.0.0.1/albums]

@@ -1,8 +1,8 @@
-<% @page_title = 'Your Shopping Cart' %>
+<% @page_title = 'Checkout' %>
 
 <h1>Music Library Store</h1>
 
-<h2>Your Shopping Cart</h2>
+<h2>Checkout</h2>
 
 <table style="width: 500px; border-collapse: collapse;">
 	<tr>
@@ -23,7 +23,6 @@
 			<p style="font-size: 12px; font-weight: bold;"><%= h(item.album.artist.name) if item.album.artist %></p>
 			<td><p style="font-size: 12px;"><%= item.quantity %></p></td>
 			<td><p style="font-size: 12px;"><%= number_to_currency(item.price) %></p></td>
-			<td><%= link_to('Remove item', :action => 'remove_from_cart', :id => item.album.id)%>
 		</td>
 	</tr>
 <% end -%>
@@ -36,7 +35,23 @@
 	</tr>
 </table>
 <br />
-<%= link_to('Continue Shopping', :action => 'list') %> | 
-<%= link_to('Checkout', :action => 'checkout') %><br />
+<%= link_to('Continue Shopping', :action => 'list') %>
 <br />
-<%= link_to('Empty Cart', {:action => 'empty_cart'}, :confirm => 'Are you sure?') %>
+<%= start_form_tag(:action => 'save_order') %>
+	<%= error_messages_for('customer') %>
+
+	<p><label for="customer_first_name">First name</label><br/>
+	<%= text_field('customer', 'first_name') %></p>
+
+	<p><label for="customer_last_name">Last name</label><br/>
+	<%= text_field('customer', 'last_name') %></p>
+
+	<p><label for="customer_zip_code">Zip code</label><br/>
+	<%= text_field('customer', 'zip_code') %></p>
+	
+	<p>Credit card<br/>
+	<%= text_field_tag('credit_card') %></p>
+
+	<br />
+	<%= submit_tag("Place Order") %>
+<%= end_form_tag %>

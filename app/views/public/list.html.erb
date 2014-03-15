@@ -1,5 +1,4 @@
-
-<%= @page_title = 'Browse the Music Library' %>
+<% @page_title = 'Browse the Music Library' %>
 
 <h1>Music Library Store</h1>
 
@@ -13,13 +12,13 @@
 		</td>
 		<td>
 			<p style="font-size: 12px; font-weight: bold;"><%= h(album.artist.name) if album.artist %></p>
-			<td><p style="font-size: 12px;"><%= album.price %></p></td>
+			<td><p style="font-size: 12px;"><%= number_to_currency(album.price) %></p></td>
 		</td>
 	</tr>
 	<tr style="background: #<%= row_color %>;">
 		<td><p style="font-size: 12px;">Released: <%= album.release_date.strftime("%Y") %></p></td>
 		<td><p style="font-size: 12px;">Genre: <%= h(album.genre) %></p></td>
-		<td><p style="font-size: 12px;"><%= link_to('Add to Cart', :action => 'add_to_cart', :id => album.id)</p></td>
+		<td><p style="font-size: 12px;"><%= link_to('Add to Cart', :action => 'add_to_cart', :id => album.id) %></p></td>
 	</tr>
 <% end -%>
 </table>

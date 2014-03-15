@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>MLS: <%= @page_title || 'Music Library Store' %></title>
+		<%= stylesheet_link_tag('scaffold') %>
+	</head>
+	<body>
+
+		<p style="color: green"><%= flash[:notice] %></p>
+
+		<%= yield  %>
+
+	</body>
+</html>

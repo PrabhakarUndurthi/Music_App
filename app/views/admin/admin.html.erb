@@ -1,0 +1,13 @@
+<h1>Admin Area Login</h1>
+
+<%= start_form_tag(:action => 'send_login') %>
+	<%= error_messages_for 'user' %>
+
+	<p><label for="user_name">Name</label><br/>
+	<%= text_field('user', 'name') %></p>
+
+	<p><label for="user_password">Password</label><br/>
+	<%= password_field('user', 'password') %></p>
+
+	<%= submit_tag("Log in") %>
+<%= end_form_tag %>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Music Library Admin Menu</title>
+	</head>
+	<body>
+		
+		<h1>Music Library: Administration</h1>
+		
+		<p>Welcome to the Music Library Administration Area. Select a link below to manage the database information.</p>
+		
+		<p>
+		<%= link_to('Manage Albums', :controller => 'albums', :action => 'list') %><br />
+		<%= link_to('Manage Artists', :controller => 'artists', :action => 'list') %><br />
+		<%= link_to('Manage Features', :controller => 'features', :action => 'list') %><br />
+		<%= link_to('Manage Orders', :controller => 'orders', :action => 'list') %><br />
+		<%= link_to('Manage Customers', :controller => 'customers', :action => 'list') %><br />
+		<%= link_to('Manage Users', :controller => 'users', :action => 'list') %><br />
+		</p>
+
+	</body>
+</html>

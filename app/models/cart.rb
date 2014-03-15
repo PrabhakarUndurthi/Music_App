@@ -4,10 +4,14 @@ class Cart < ActiveRecord::Base
 	attr_reader :total_price
 
 	def initialize
-
-		@items = []
-		@total_price = 0.0
+        empty_all_items
 	end
+
+	def empty_all_items
+		@items = []
+		@total_price 0.0
+	end
+
 
 
     # when the user select an album then, we are ready to add that album to the shopping cart
@@ -15,14 +19,14 @@ class Cart < ActiveRecord::Base
 
 
 	def add_album(album)
-		line_item = lineItem.new
-		line_item.album = album
-		line_item.quantity = 1
-		line_item.price = album.price
-		@items << line_item
-		@total_price += line_item.price
-	end
-
-
+		existing_item = @items.find{|item| item.album_id ==album.id}
+	# if the item is already exists? then increase the quantity
+	if existing_item
+	  existing_item.quantity += 1
+	else
+		@items << LineItem.new_based_on(album)
+	  end
+	  @total_price += album.price
+   end
 
 end
